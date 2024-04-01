@@ -17,8 +17,8 @@ public class EjemploListMap {
 		List<ModeloCoche> modelos = Arrays.asList(modelo1, modelo2, modelo3);
 
 		// Supongamos que deseamos buscar dentro de la lista el Toyota Yaris
-		// ‚ÄúY1Yaris‚Äù e imprimir sus datos por pantalla. Con Java 8 es
-		// relativamente sencillo. Podemos usar un stream y el m√©todo findFirst
+		// ìY1Yarisî e imprimir sus datos por pantalla. Con Java 8 es
+		// relativamente sencillo. Podemos usar un stream y el mÈtodo findFirst
 		// que nos devuelve un optional.
 
 		Optional<ModeloCoche> optional = modelos.stream().filter(m -> m.getIdentificador().equals("Y1Yaris"))
@@ -29,27 +29,27 @@ public class EjemploListMap {
 			System.out.println(optional.get().getPrecio());
 		}
 
-		// ¬øEs esta la soluci√≥n correcta? . La realidad es que ‚Äúdepende‚Äù .
-		// Depende de si sobre esta lista vamos a buscar una √∫nica vez o vamos a
-		// buscar muchas veces. Por ejemplo imagin√©monos que la lista de
+		// øEs esta la soluciÛn correcta? . La realidad es que ìdependeî .
+		// Depende de si sobre esta lista vamos a buscar una ˙nica vez o vamos a
+		// buscar muchas veces. Por ejemplo imaginÈmonos que la lista de
 		// elementos contiene todas las marcas y los modelos de los coches.
 		// Puede ser una lista muy grande de elementos que nos interese tener
-		// cargada en memoria en una aplicaci√≥n web ya sea a trav√©s de un
-		// mecanismo de cache o a trav√©s del ServletContext.
-		// Si la consultamos en muchas p√°ginas para sacar la informaci√≥n de uno
+		// cargada en memoria en una aplicaciÛn web ya sea a travÈs de un
+		// mecanismo de cache o a travÈs del ServletContext.
+		// Si la consultamos en muchas p·ginas para sacar la informaciÛn de uno
 		// u otro modelo de coche. Tendremos continuamente que buscar dentro de
-		// la lista un √∫nico resultado.
-		// Ser√≠a mucho mejor almacenar esta estructura en memoria convertida en
-		// un mapa. Los mapas nos permiten acceder mucho m√°s r√°pido a un
-		// elemento a trav√©s de su hash ya que accedemos a una sublista.
-		// ¬øC√≥mo podemos hacer esto? . Muy sencillo podemos usar Java 8 y el
+		// la lista un ˙nico resultado.
+		// SerÌa mucho mejor almacenar esta estructura en memoria convertida en
+		// un mapa. Los mapas nos permiten acceder mucho m·s r·pido a un
+		// elemento a travÈs de su hash ya que accedemos a una sublista.
+		// øCÛmo podemos hacer esto? . Muy sencillo podemos usar Java 8 y el
 		// collector de mapas para convertir de forma directa la estructura de
 		// list a una estructura map
-		// De esta forma ser√° mucho m√°s r√°pido y mucho m√°s sencillo acceder a
-		// los datos de un elemento concreto a trav√©s de del uso de su
+		// De esta forma ser· mucho m·s r·pido y mucho m·s sencillo acceder a
+		// los datos de un elemento concreto a travÈs de del uso de su
 		// identificador. Acabamos de usar Java Streams para realizar una
-		// conversi√≥n autom√°tica de Java List to Map. Este tipo de colectores
-		// nos puede ser muy √∫til cuando necesitemos almacenar informaci√≥n que
+		// conversiÛn autom·tica de Java List to Map. Este tipo de colectores
+		// nos puede ser muy ˙til cuando necesitemos almacenar informaciÛn que
 		// va a ser continuamente consultada a traves de una cache o mecanismo
 		// similar.
 
