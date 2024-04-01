@@ -9,6 +9,7 @@ public class ModeloCoche {
 
 	public ModeloCoche(int id, String identificador, String marca, double precio) {
 		super();
+		
 		this.id = id;
 		this.identificador = identificador;
 		this.marca = marca;
