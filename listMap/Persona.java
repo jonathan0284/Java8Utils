@@ -6,6 +6,11 @@ public class Persona {
 	private String apellido;
 	private int edad;
 
+	public Persona(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+
 	public Persona(String nombre, String apellido, int edad) {
 		super();
 		this.nombre = nombre;
