@@ -12,8 +12,8 @@ public class EjemploListMap {
 		// TODO Auto-generated method stub
 
 		ModeloCoche modelo1 = new ModeloCoche(1, "Y1Yaris", "Toyota", 16000);
-		ModeloCoche modelo2 = new ModeloCoche(2, "Y2Yaris", "Toyota", 20000);
-		ModeloCoche modelo3 = new ModeloCoche(3, "Y3Yaris", "Toyota", 22000);
+		ModeloCoche modelo2 = new ModeloCoche(2, "N123_Nissan", "Nissan", 20000);
+		ModeloCoche modelo3 = new ModeloCoche(3, "M856_Mercedez", "Mercedez", 22000);
 		List<ModeloCoche> modelos = Arrays.asList(modelo1, modelo2, modelo3);
 
 		// Supongamos que deseamos buscar dentro de la lista el Toyota Yaris
@@ -57,7 +57,7 @@ public class EjemploListMap {
 
 		Map<Integer, ModeloCoche> mapa = modelos2.stream().collect(Collectors.toMap(x -> x.getId(), x -> x));
 
-		ModeloCoche nuevoModelo1 = mapa.get("Y1Yaris");
+		ModeloCoche nuevoModelo1 = mapa.get(2);
 
 		System.out.println(nuevoModelo1.getMarca());
 		System.out.println(nuevoModelo1.getPrecio());
